@@ -24,12 +24,12 @@ app.get('/roll/:count', (req, res) => {
     }
 
     // update the result display
-    document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+    // document.getElementById('result').textContent = JSON.stringify(data, null, 2);
     // send the results back to the browser
-    // res.json({
-        // dice: diceResults,
-        // count: count
-    // });
+    res.json({
+        dice: diceResults,
+        count: count
+    });
 });
 
 app.get('/', (req, res) => {

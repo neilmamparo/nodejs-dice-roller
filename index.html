@@ -1,15 +1,32 @@
-// display json result
 <!DOCTYPE html>
 <html>
 <head>
     <title>Dice Roller</title>
+    <style>
+        body { font-family: monospace; margin: 40px; }
+        pre { background: #f0f0f0; padding: 20px; border-radius: 5px; }
+    </style>
 </head>
 <body>
-    <h1>Dice Roller</h1>
-    <pre id="result"></pre>
+    <h1>🎲 Dice Roll Results</h1>
+    <pre id="result">Loading...</pre>
+
     <script>
-        // Display the JSON result in the <pre> element
-        document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+        // Automatically fetch dice rolls when page loads
+        fetch('/roll/1')  // Default to 1 die
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Display the JSON result in the <pre> element
+                document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('result').textContent = 'Error: ' + error.message;
+            });
     </script>
 </body>
 </html>

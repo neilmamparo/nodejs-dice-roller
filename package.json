@@ -17,5 +17,8 @@
   "scripts": {
     "test": "echo \"No tests yet, but skipping...\" && exit 0",
     "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }

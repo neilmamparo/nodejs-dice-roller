@@ -16,11 +16,15 @@ app.get('/roll/:count', (req, res) => {
         diceResults.push(randomValue);
     }
     
-    // Send the results back to the browser
+    // send the results back to the browser
     res.json({
         dice: diceResults,
         count: count
     });
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port, () => {

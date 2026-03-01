@@ -22,12 +22,14 @@ app.get('/roll/:count', (req, res) => {
         const randomValue = Math.floor(Math.random() * 6) + 1;
         diceResults.push(randomValue);
     }
-    
+
+    // update the result display
+    document.getElementById('result').textContent = JSON.stringify(data, null, 2);
     // send the results back to the browser
-    res.json({
-        dice: diceResults,
-        count: count
-    });
+    // res.json({
+        // dice: diceResults,
+        // count: count
+    // });
 });
 
 app.get('/', (req, res) => {

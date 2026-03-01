@@ -11,7 +11,7 @@
     <pre id="result">Loading...</pre>
 
     <script>
-        // Automatically fetch dice rolls when page loads
+        // automatically fetch dice rolls when page loads
         fetch('/roll/1')  // Default to 1 die
             .then(response => {
                 if (!response.ok) {
@@ -20,7 +20,7 @@
                 return response.json();
             })
             .then(data => {
-                // Display the JSON result in the <pre> element
+                // display the JSON result in the <pre> element
                 document.getElementById('result').textContent = JSON.stringify(data, null, 2);
             })
             .catch(error => {

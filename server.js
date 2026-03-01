@@ -4,6 +4,10 @@ const port = process.env.PORT || 3000;  // THIS IS REQUIRED FOR AZURE
 
 app.use(express.static(__dirname))
 
+app.get('/test', (req, res) => {
+    res.send('Server is alive!');
+});
+
 // api endpoint
 app.get('/roll/:count', (req, res) => {
     const count = parseInt(req.params.count);

@@ -1,0 +1,15 @@
+// display json result
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Roller</title>
+</head>
+<body>
+    <h1>Dice Roller</h1>
+    <pre id="result"></pre>
+    <script>
+        // Display the JSON result in the <pre> element
+        document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+    </script>
+</body>
+</html>

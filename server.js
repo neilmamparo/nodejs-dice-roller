@@ -8,7 +8,7 @@ app.get('/roll/:count', (req, res) => {
     
     // random number generator
     for (let i = 0; i < count; i++) {
-        // This is the same Math.random() you used before!
+        // Generate a random number between 1 and 6
         const randomValue = Math.floor(Math.random() * 6) + 1;
         diceResults.push(randomValue);
     }

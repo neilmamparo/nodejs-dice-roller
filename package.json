@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-dice-roller",
+  "version": "1.0.0",
+  "description": "Node.js website that serves as a WebService API for my Dice Roller web app",
+  "homepage": "https://github.com/neilmamparo/nodejs-dice-roller#readme",
+  "bugs": {
+    "url": "https://github.com/neilmamparo/nodejs-dice-roller/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neilmamparo/nodejs-dice-roller.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  }
+}

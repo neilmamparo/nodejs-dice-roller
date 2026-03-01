@@ -23,17 +23,11 @@ app.get('/roll/:count', (req, res) => {
         diceResults.push(randomValue);
     }
 
-    // update the result display
-    // document.getElementById('result').textContent = JSON.stringify(data, null, 2);
     // send the results back to the browser
     res.json({
         dice: diceResults,
         count: count
     });
-});
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port, () => {

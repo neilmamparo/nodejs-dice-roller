@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;  // THIS IS REQUIRED FOR AZURE
 
 // api endpoint
 app.get('/roll/:count', (req, res) => {
@@ -20,6 +21,6 @@ app.get('/roll/:count', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });

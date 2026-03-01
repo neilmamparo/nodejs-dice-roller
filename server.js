@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // api endpoint
-app.get('/api/roll/:count', (req, res) => {
+app.get('/roll/:count', (req, res) => {
     const count = parseInt(req.params.count);
     const diceResults = [];
     
